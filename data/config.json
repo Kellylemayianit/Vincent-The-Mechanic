@@ -1,0 +1,22 @@
+{
+  "business": {
+    "name": "Kimana Auto Care",
+    "owner": "Vincent Mutinda",
+    "phone": "+254793812140",
+    "whatsapp": "+254793812140",
+    "email": "kimanaautocare@gmail.com",
+    "location": "Kimana Town, opposite the market",
+    "googleMapsUrl": "https://maps.app.goo.gl/6HnzUBJ7MsX6GGEY7",
+    "workingHours": "9:00 AM - 5:00 PM",
+    "emergency": "24/7 On-call",
+    "tagline": "From Petrol Station to Your Driveway",
+    "story": "After 5 years working at a petrol station in Kimana, I decided to bring honest, reliable mechanic services directly to your doorstep. I've worked on every car model you can imagine, and now I'm here to help you - wherever you are in Kimana.",
+    "experience": "5+ Years",
+    "specialties": ["All Car Models", "Mobile Service", "Fair Pricing"]
+  },
+  "social": {
+    "whatsapp": "+254793812140",
+    "facebook": "kimanaautocare",
+    "instagram": "kimana_autocare"
+  }
+}

@@ -1,0 +1,8 @@
+[
+  {"id": 1, "image": "placeholder/engine-work.jpg", "title": "Engine Repair", "description": "Complete engine diagnostic and repair"},
+  {"id": 2, "image": "placeholder/brake-service.jpg", "title": "Brake Service", "description": "Brake pad replacement and inspection"},
+  {"id": 3, "image": "placeholder/mobile-service.jpg", "title": "Mobile Service", "description": "On-site repair in Kimana"},
+  {"id": 4, "image": "placeholder/electrical-work.jpg", "title": "Electrical Work", "description": "Battery and electrical system repair"},
+  {"id": 5, "image": "placeholder/oil-change.jpg", "title": "Oil Change", "description": "Complete oil and filter change"},
+  {"id": 6, "image": "placeholder/vincent-working.jpg", "title": "Vincent at Work", "description": "5 years of experience, now serving you"}
+]

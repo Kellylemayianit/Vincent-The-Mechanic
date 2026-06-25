@@ -1,0 +1,45 @@
+{
+  "categories": [
+    {
+      "name": "Engine Services",
+      "icon": "🔧",
+      "description": "Complete engine diagnostics and repairs",
+      "services": [
+        {"id": "diagnostic", "name": "Engine Diagnostic", "description": "Full computer diagnostic check", "price": "From KSh 1,500", "time": "1-2 hrs", "popular": true},
+        {"id": "oil-change", "name": "Oil Change", "description": "Complete oil change with filter", "price": "From KSh 2,500", "time": "45 min"},
+        {"id": "engine-repair", "name": "Engine Repair", "description": "Major engine repairs", "price": "Call for quote", "time": "Varies"}
+      ]
+    },
+    {
+      "name": "Brakes & Suspension",
+      "icon": "🛞",
+      "description": "Safety first - complete brake services",
+      "services": [
+        {"id": "brake-pads", "name": "Brake Pad Replacement", "description": "Front and rear brake pads", "price": "From KSh 3,500", "time": "1.5 hrs"},
+        {"id": "suspension", "name": "Suspension Repair", "description": "Shocks and suspension work", "price": "Call for quote", "time": "2-3 hrs"}
+      ]
+    },
+    {
+      "name": "Electrical",
+      "icon": "⚡",
+      "description": "Electrical system diagnostics and repairs",
+      "services": [
+        {"id": "battery", "name": "Battery Check", "description": "Battery testing and replacement", "price": "From KSh 1,000", "time": "30 min"},
+        {"id": "alternator", "name": "Alternator Repair", "description": "Alternator testing and repair", "price": "Call for quote", "time": "1-2 hrs"}
+      ]
+    },
+    {
+      "name": "Mobile Services",
+      "icon": "🚗",
+      "description": "We come to you anywhere in Kimana",
+      "services": [
+        {"id": "on-site", "name": "On-site Repair", "description": "We come to your location", "price": "Call for quote", "time": "Varies", "featured": true},
+        {"id": "emergency", "name": "24/7 Emergency", "description": "Emergency breakdown service", "price": "Call for quote", "time": "ASAP", "featured": true}
+      ]
+    }
+  ],
+  "collaborative": {
+    "title": "Can't Fix It? We've Got You Covered",
+    "description": "I work with a network of specialized mechanics in Kimana. If I can't fix it, I know someone who can - and I'll personally make sure the job is done right."
+  }
+}

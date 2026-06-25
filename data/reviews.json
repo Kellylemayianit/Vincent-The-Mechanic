@@ -1,0 +1,7 @@
+[
+  {"id": 1, "customer": "Grace Wanjiru", "location": "Kimana", "rating": 5, "comment": "Vincent fixed my engine in no time! Honest and very professional. He came to my house and had it sorted in 2 hours.", "date": "2026-06-20"},
+  {"id": 2, "customer": "Peter ole Kiruti", "location": "Oloitokitok", "rating": 5, "comment": "Best mechanic in Kimana! I've tried others but Vincent is the most reliable. His prices are fair and he explains everything clearly.", "date": "2026-06-15"},
+  {"id": 3, "customer": "Sarah Naserian", "location": "Kimana Town", "rating": 5, "comment": "Called him at 10 PM when my car broke down. He was there in 30 minutes! Real 24/7 service. Can't thank him enough.", "date": "2026-06-10"},
+  {"id": 4, "customer": "James Mwangi", "location": "Tarakea Highway", "rating": 4, "comment": "Great mechanic! Fixed my brakes and suspension. Works with other mechanics for complex jobs - very honest approach.", "date": "2026-06-05"},
+  {"id": 5, "customer": "Mary Nkatha", "location": "Kimana", "rating": 5, "comment": "Vincent is a lifesaver! My car wouldn't start and he came to my office parking lot. Quick diagnostic and repair. Highly recommend!", "date": "2026-06-01"}
+]
