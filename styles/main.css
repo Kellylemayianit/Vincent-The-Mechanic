@@ -1,0 +1,427 @@
+/* ==========================================================================
+   main.css
+   Design tokens, global resets, and base layout primitives for
+   Kimana Auto Care. Component-specific styles live in styles/components/
+   and shared utility styles live in styles/utilities/.
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap");
+
+:root {
+  /* Brand palette */
+  --color-blue-900: #0f2e6b;
+  --color-blue-700: #1a3f8f;
+  --color-blue: #1a56db;
+  --color-blue-100: #e3eaf9;
+  --color-gold: #f59e0b;
+  --color-gold-dark: #b45309;
+  --color-gold-100: #fef3e0;
+
+  /* WhatsApp green */
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #1ba851;
+
+  /* Neutrals */
+  --color-ink: #14213d;
+  --color-text: #2b3445;
+  --color-text-muted: #5c6678;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f6f8fc;
+  --color-border: #e1e6ef;
+
+  /* Semantic */
+  --color-danger: #dc2626;
+
+  /* Typography */
+  --font-display: "Outfit", "Manrope", sans-serif;
+  --font-body: "Manrope", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+
+  /* Radius & shadow */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --shadow-sm: 0 2px 8px rgba(15, 46, 107, 0.08);
+  --shadow-md: 0 8px 24px rgba(15, 46, 107, 0.12);
+  --shadow-lg: 0 16px 40px rgba(15, 46, 107, 0.18);
+
+  /* Layout */
+  --container-max: 1140px;
+  --header-height: 72px;
+}
+
+/* ---- Reset ---- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-surface-alt);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--color-ink);
+  line-height: 1.2;
+  margin: 0 0 var(--space-3);
+}
+
+p {
+  margin: 0 0 var(--space-4);
+}
+
+a {
+  color: var(--color-blue);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ---- Layout primitives ---- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-5);
+}
+
+main {
+  display: block;
+  padding-top: var(--header-height);
+}
+
+section {
+  padding: var(--space-8) 0;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto var(--space-7);
+}
+
+.section-heading .eyebrow {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold-dark);
+  background: var(--color-gold-100);
+  padding: var(--space-2) var(--space-3);
+  border-radius: 999px;
+  margin-bottom: var(--space-3);
+}
+
+.section-heading h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  margin-bottom: var(--space-2);
+}
+
+.section-heading p {
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+}
+
+.section-alt {
+  background: var(--color-surface);
+}
+
+/* Badge shared base (mobile service / featured tags etc.) */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: var(--space-1) var(--space-3);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.badge-mobile-service {
+  background: var(--color-blue-100);
+  color: var(--color-blue-700);
+  border: 1px solid var(--color-blue);
+}
+
+/* ---- Site Footer ---- */
+.site-footer {
+  background: var(--color-ink);
+  color: rgba(255, 255, 255, 0.85);
+  padding: var(--space-8) 0 0;
+  margin-top: var(--space-9);
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  padding-bottom: var(--space-7);
+}
+
+.footer-heading {
+  color: #fff;
+  margin-bottom: var(--space-2);
+}
+
+.footer-tagline {
+  color: var(--color-gold);
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+}
+
+.footer-text {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.88rem;
+}
+
+.footer-subheading {
+  color: #fff;
+  font-size: 0.95rem;
+  margin-bottom: var(--space-3);
+}
+
+.footer-links li {
+  margin-bottom: var(--space-2);
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-links a:hover {
+  color: var(--color-gold);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: var(--space-4) 0 var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+@media (min-width: 700px) {
+  .footer-inner {
+    grid-template-columns: 1.4fr 1fr 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* ---- Floating Emergency Badge ---- */
+.emergency-badge {
+  position: fixed;
+  bottom: var(--space-5);
+  right: var(--space-5);
+  z-index: 600;
+}
+
+.emergency-fab {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--color-danger);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  box-shadow: var(--shadow-lg);
+  animation: pulse-emergency 2.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .emergency-fab {
+    animation: none;
+  }
+}
+
+@keyframes pulse-emergency {
+  0%, 100% { box-shadow: var(--shadow-lg), 0 0 0 0 rgba(220, 38, 38, 0.4); }
+  50% { box-shadow: var(--shadow-lg), 0 0 0 8px rgba(220, 38, 38, 0); }
+}
+
+.emergency-fab-text {
+  display: none;
+}
+
+.emergency-menu {
+  position: absolute;
+  bottom: calc(100% + var(--space-3));
+  right: 0;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 180px;
+}
+
+.emergency-menu[hidden] {
+  display: none;
+}
+
+.emergency-menu-item {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-ink);
+}
+
+.emergency-menu-item:hover {
+  background: var(--color-surface-alt);
+}
+
+.emergency-menu-whatsapp {
+  color: var(--color-whatsapp-dark);
+}
+
+@media (min-width: 640px) {
+  .emergency-fab-text {
+    display: inline;
+  }
+}
+
+/* ---- Shared page section blocks (home/services/contact) ---- */
+.trust-bar {
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-6) 0;
+}
+
+.trust-bar-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+  text-align: center;
+}
+
+.trust-bar-item .trust-bar-icon {
+  font-size: 1.8rem;
+  margin-bottom: var(--space-2);
+}
+
+.trust-bar-item strong {
+  display: block;
+  font-family: var(--font-display);
+  color: var(--color-ink);
+  font-size: 0.95rem;
+}
+
+.trust-bar-item span {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+@media (min-width: 700px) {
+  .trust-bar-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.cta-banner {
+  background: linear-gradient(120deg, var(--color-blue-900), var(--color-blue));
+  border-radius: var(--radius-lg);
+  padding: var(--space-7);
+  text-align: center;
+  color: #fff;
+}
+
+.cta-banner h2 {
+  color: #fff;
+  margin-bottom: var(--space-3);
+}
+
+.cta-banner p {
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 480px;
+  margin: 0 auto var(--space-5);
+}
+
+/* Generic skip link for accessibility */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--color-ink);
+  color: white;
+  padding: var(--space-2) var(--space-4);
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  left: var(--space-3);
+  top: var(--space-3);
+}
