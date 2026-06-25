@@ -1,0 +1,120 @@
+/* ==========================================================================
+   buttons.css
+   Shared button styles — used by CTAs, cart actions, FAQ toggles, etc.
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-sm);
+  border: 2px solid transparent;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-lg {
+  padding: var(--space-4) var(--space-6);
+  font-size: 1.05rem;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn-whatsapp {
+  background: var(--color-whatsapp);
+  color: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-whatsapp:hover {
+  background: var(--color-whatsapp-dark);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-blue);
+  border-color: var(--color-blue);
+}
+
+.btn-outline:hover {
+  background: var(--color-blue-100);
+}
+
+.btn-primary {
+  background: var(--color-blue);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: var(--color-blue-900);
+}
+
+.btn-gold {
+  background: var(--color-gold);
+  color: var(--color-ink);
+}
+
+.btn-gold:hover {
+  background: var(--color-gold-dark);
+  color: #fff;
+}
+
+.btn-text {
+  background: transparent;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  padding: var(--space-2) var(--space-3);
+}
+
+.btn-text:hover {
+  color: var(--color-danger);
+}
+
+.btn-nav-cta {
+  margin-left: var(--space-4);
+}
+
+.btn-disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.btn-add-to-cart {
+  width: 100%;
+  background: var(--color-blue-100);
+  color: var(--color-blue-700);
+  border-color: var(--color-blue);
+}
+
+.btn-add-to-cart:hover {
+  background: var(--color-blue);
+  color: #fff;
+}
+
+.btn-add-to-cart.btn-in-cart {
+  background: var(--color-whatsapp);
+  color: #fff;
+  border-color: var(--color-whatsapp);
+}
+
+.btn-add-to-cart.btn-in-cart:hover {
+  background: var(--color-whatsapp-dark);
+}
