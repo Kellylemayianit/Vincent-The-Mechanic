@@ -1,0 +1,69 @@
+/* ==========================================================================
+   gallery.css
+   Work-sample gallery grid with CSS-drawn placeholder tiles.
+   ========================================================================== */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.gallery-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-card:hover,
+.gallery-card-active {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.gallery-image-placeholder {
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(135deg, var(--color-blue-100), var(--color-gold-100));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.gallery-placeholder-icon {
+  font-size: 2rem;
+}
+
+.gallery-placeholder-label {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.gallery-card figcaption {
+  padding: var(--space-3) var(--space-4);
+}
+
+.gallery-card-title {
+  font-size: 0.95rem;
+  margin-bottom: var(--space-1);
+}
+
+.gallery-card-desc {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+@media (min-width: 700px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

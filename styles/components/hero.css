@@ -1,0 +1,185 @@
+/* ==========================================================================
+   hero.css
+   Home page hero: Vincent's story, trust signals, emergency banner.
+   Signature visual: the "petrol pump to driveway" gradient backdrop,
+   referencing the tagline literally via a horizon-line gradient.
+   ========================================================================== */
+
+.hero {
+  background: linear-gradient(180deg, var(--color-blue-900) 0%, var(--color-blue) 55%, var(--color-blue-100) 100%);
+  padding: var(--space-8) 0 var(--space-9);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--color-gold) 0 24px,
+    transparent 24px 48px
+  );
+  opacity: 0.7;
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
+}
+
+.hero-content {
+  color: #fff;
+}
+
+.hero-badge {
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  margin-bottom: var(--space-4);
+}
+
+.hero-title {
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.01em;
+}
+
+.hero-subtitle {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.05rem;
+  max-width: 560px;
+  margin-bottom: var(--space-5);
+}
+
+.hero-trust-signals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.trust-pill {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: var(--space-2) var(--space-4);
+  border-radius: 999px;
+}
+
+.hero-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.hero-cta-row .btn-outline {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.hero-cta-row .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.hero-specialties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.hero-visual {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.hero-emergency-banner {
+  background: var(--color-gold);
+  color: var(--color-ink);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  box-shadow: var(--shadow-lg);
+}
+
+.hero-emergency-banner .emergency-icon {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.hero-emergency-banner strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  margin-bottom: var(--space-1);
+}
+
+.hero-emergency-banner p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.hero-owner-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  box-shadow: var(--shadow-md);
+}
+
+.hero-owner-avatar {
+  font-size: 2.4rem;
+  background: var(--color-blue-100);
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hero-owner-card strong {
+  display: block;
+  font-family: var(--font-display);
+  color: var(--color-ink);
+}
+
+.hero-owner-card p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+@media (min-width: 900px) {
+  .hero-inner {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .hero-content {
+    flex: 1.2;
+  }
+
+  .hero-visual {
+    flex: 1;
+  }
+}
